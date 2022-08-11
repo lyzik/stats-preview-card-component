@@ -1,12 +1,24 @@
-html{
-    font-size: 62.5%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
 body{
   background-color: hsl(233, 47%, 7%);
 }
 
-#window{
+.window{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,13 +27,17 @@ body{
     background-color: hsl(244, 38%, 16%);
     border-radius: 10px;
 }
-#left{
+.left{
     width: 55%;
     float: left;
 }
-#right{
+.right{
     width: 45%;
     float: left;
+    background-color: hsl(277, 64%, 61%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 img{
     vertical-align: top;
@@ -33,7 +49,7 @@ img{
 h1{
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 4%;
+    padding-top: 10%;
     font-family: 'Inter', sans-serif;
     color: hsl(0, 0%, 100%);
     font-weight: 700;
@@ -42,11 +58,12 @@ h1{
 h2{
     padding-left: 10%;
     padding-right: 20%;
+    padding-top: 3%;
     font-size: 1vw;
     color: hsla(0, 0%, 100%, 0.75);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 1.5vw;
 }
 
 .statistics{
@@ -59,7 +76,7 @@ h2{
     font-family: 'Inter', sans-serif;
     font-size: 2vw;
     color: hsl(0, 0%, 100%);
-    line-height: 2px;
+    padding-top: 7vh;
     font-weight: 600;
 }
 .stats-headers{
@@ -67,10 +84,10 @@ h2{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: hsla(0, 0%, 100%, 0.6);
-    line-height: 2px;
+    line-height: 20px;
 }
 @media only screen and (max-width: 600px) {
-    #window{
+    .window{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -81,10 +98,10 @@ h2{
         display: flex;
         flex-direction: column-reverse;
     }
-    #left{
+    .left{
         width: 100%;
     }
-    #right{
+    .right{
         width: 100%;
     }
     img{
@@ -93,30 +110,32 @@ h2{
         border-top-left-radius: 10px;
     }
     h1{
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 4%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 15%;
         text-align: center;
-        font-size: 5vw;
+        font-size: 5.5vw;
     }
     h2{
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
         line-height: 20px;
         text-align: center;
         font-size: 3vw;
+        padding-bottom: 2vh;
     }
 
     .statistics{
         flex-direction: column;
         padding: 0%;
-        padding-bottom: 15px;
         text-align: center;
     }
     .stats{
         font-size: 5vw;
+        padding: 0;
     }
     .stats-headers{
-        font-size: 2vw;
+        font-size: 3vw;
+        padding-bottom: 2vh;
     }
   }
